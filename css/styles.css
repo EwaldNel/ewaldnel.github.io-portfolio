@@ -6,12 +6,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-default-color: #42C0FB;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: rgb(208,208,208);
+    background: #8e9eab;
+    background: -webkit-linear-gradient(to right, #eef2f3, #C8C8C8);
+    background: linear-gradient(to right, #eef2f3, #C8C8C8);
     color: #303030;
     max-width: 1400px;
     min-width: 300px;
@@ -46,7 +52,7 @@ strong {
 }
 
 :focus {
-  outline: 3px solid #42C0FB;
+  outline: 3px solid var(--main-default-color);
   outline-offset: 3px;
 }
 
@@ -55,7 +61,7 @@ strong {
 .btn {
     display: inline-block;
     padding: 8px 40px;
-    background: #42C0FB;
+    background: var(--main-default-color);
     color: #303030;
     text-decoration: none;
     font-weight: 900;
@@ -90,6 +96,7 @@ h2 {
 h3 {
     font-size: 20px;
     margin: 20px 0 20px 0;
+    font-weight: bold;
 }
 
 .section-title {
@@ -112,14 +119,14 @@ h3 {
 
 .section-subtitle-intro, 
 .section-subtitle-about {
-    background: #42C0FB;
+    background: var(--main-default-color);
     padding: 4px;
     font-family: 'Bebas Neue', cursive;
     margin-bottom: 16px;
 }
 
 .section-title-services {
-    color: #42C0FB;
+    color: var(--main-default-color);
     position: relative;  
 }
 
@@ -129,12 +136,12 @@ h3 {
     width: 15%;
     height: 1px;
     margin: 8px auto 16px;
-    background: #42C0FB;
+    background: var(--main-default-color);
     opacity: 0.25;
 }
 
 .section-subtitle-work {
-    color: #42C0FB;
+    color: var(--main-default-color);
     font-weight: 900;
     margin-bottom: 32px;
 }
@@ -150,9 +157,13 @@ header {
     font-weight: 900;
 }
 
+.logo-name {
+    color: var(--main-default-color);
+}
+
 .nav {
     position: fixed;
-    background-color: rgba(0, 0, 0, .92);
+    background-color: rgba(0, 0, 0, .90);
     color: #fff;
     top: 0;
     bottom: 0;
@@ -183,13 +194,13 @@ header {
 }
 
 .nav-link:hover {
-    color: #42C0FB;
+    color: var(--main-default-color);
 }
 
 .nav-toggle {
     padding: 12px;
     background: transparent;
-    border: 1.5px solid #303030;
+    border: 2px solid #303030;
     border-radius: 4px;
     cursor: pointer;
     position: absolute;
@@ -218,7 +229,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background:  #42C0FB;
+    background:  var(--main-default-color);
     width: 32px;
     height: 2px;
     border-radius: 16px;
@@ -242,6 +253,20 @@ header {
 }
 
 /* == CLASS STYLES == */
+
+.themes span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+.themes {
+    text-align: center;
+    margin: 10px 10px 30px 10px;
+}
 
 .my-services {
     background-color: #303030;
@@ -270,7 +295,7 @@ header {
 
 .svg-img:hover {
     transform: scale(1.05);
-    background: #42C0FB;
+    background: var(--main-default-color);
     border-radius: 45%;
 }
 
@@ -334,7 +359,7 @@ header {
 
 .footer-link:hover {
     text-decoration: underline;
-    color: #42C0FB;
+    color: var(--main-default-color);
 }
 
 .footer-link:hover,
